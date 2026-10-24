@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightCraft Studio | Premium Business Solutions</title>
+  <style>
+    /* --- Base Reset & Fonts --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    body {
+      color: #334155;
+      background-color: #f8fafc;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --- Navigation --- */
+    header {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #2563eb;
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      color: #475569;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+    .btn-nav {
+      background: #2563eb;
+      color: #ffffff !important;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+    }
+    .btn-nav:hover {
+      background: #1d4ed8;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 650px;
+      margin: 0 auto 2rem auto;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: inline-block;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    /* --- Services Cards --- */
+    .services {
+      background: #ffffff;
+      padding: 5rem 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    .services-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      color: #64748b;
+    }
+
+    /* --- About / Stats --- */
+    .about {
+      max-width: 1100px;
+      margin: 5rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+    }
+    .about-text {
+      flex: 1 1 450px;
+    }
+    .about-text h2 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      color: #64748b;
+      margin-bottom: 1.5rem;
+    }
+    .stats {
+      flex: 1 1 350px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .stat-box {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #2563eb;
+    }
+    .stat-label {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">BrightCraft Studio</div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn-nav">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>We Build Digital Solutions That Grow Your Business</h1>
+    <p>We help small and medium businesses modernize their presence, attract loyal customers, and drive revenue through proven strategies.</p>
+    <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="section-title">
+      <h2>What We Do</h2>
+      <p style="color: #64748b;">Tailored services built to help your business stand out.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card">
+        <div class="card-icon">💻</div>
+        <h3>Web Design & Dev</h3>
+        <p>Fast, beautiful, mobile-friendly websites designed to convert visitors into paying clients.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Digital Marketing</h3>
+        <p>Targeted campaigns and local search engine optimization to bring the right customers to your door.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Brand Strategy</h3>
+        <p>Identity, logos, and messaging guidelines that establish credibility from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Stats Section -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2>Your Partner in Long-Term Growth</h2>
+      <p>Founded with a mission to bring enterprise-level digital design to local businesses. We don't just deliver templates—we build lasting relationships and craft customized solutions tailored to your unique goals.</p>
+      <p>Whether you're starting from scratch or looking to revamp your existing brand, we're with you at every step.</p>
+    </div>
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-number">150+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">99%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Dedicated Support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2026 BrightCraft Studio. All rights reserved.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Email: hello@brightcraft.example | Phone: (555) 019-2834</p>
+  </footer>
+
+</body>
+</html>
